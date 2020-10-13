@@ -1,28 +1,25 @@
 {
-  "name": "notes",
+  "name": "fetch",
   "version": "1.0.0",
   "description": "",
-  "main": "nodes.js",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
+  "bin": {
+    "fetch": "notes.js"
   },
+  "main": "notes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/401-advanced-javascript-aya/notes.git"
+    "test": "jest --verbose --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/401-advanced-javascript-aya/notes/issues"
-  },
-  "homepage": "https://github.com/401-advanced-javascript-aya/notes#readme",
   "dependencies": {
     "is-url": "^1.2.4",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.5.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
