@@ -1,25 +1,25 @@
 'use strict';
 
-jest.mock('minimist');
+const Input =  require('../lib/input.js');
 const minimist = require('minimist');
+jest.mock('minimist');
 minimist.mockImplementation(() => {
   return {
     a: 'This mock should work'
   }
 })
 
-const Input =  require('../lib/input.js');
+let input = new Input();
 describe('Input Module', ()=> {
 
   it('getMethod() has "Invalid" default value with no valid input', () =>{
-    let input = new Input();
     expect(input.getMethod()).toEqual(undefined);
     expect(input.getMethod({ _: [], ad: 'data'})).toEqual("Invalid");
   });
 
   it('getMethod() has a key with a proper input', () =>{
-    let input = new Input();
     expect(input.getMethod({ _: [], a: 'data'})).toEqual('a');
     expect(input.getMethod({ _: [], add: 'data'})).toEqual('add');
+    // expect(input.addData('a',{ _: [], a: 'data'})).toEqual('data')
   });
 })
