@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const Input = require('./lib/input.js');
 const Notes = require('./lib/notes.js');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://aya93:good401@cluster0.o87pl.mongodb.net/notesy?retryWrites=true&w=majority' || 'mongodb://localhost:27017/notesy';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Aya93:good401@cluster0.o87pl.mongodb.net/notesSchema?retryWrites=true&w=majority' || 'mongodb://localhost:27017/notesSchema';
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,

@@ -13,8 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "is-url": "^1.2.4",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "mongoose": "^5.10.9",
+    "supergoose": "^0.2.6"
   },
   "devDependencies": {
     "jest": "^26.5.3"
