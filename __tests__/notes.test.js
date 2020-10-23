@@ -16,5 +16,5 @@ describe('Notes Module', ()=> {
     const notes = new Notes(['a', 'This works!']);
     notes.execute();
     expect(console.log).toHaveBeenCalled();
-    });
+  });
 });
