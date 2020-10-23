@@ -4,14 +4,14 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const MONGOOSE_URL = 'mongodb+srv://Aya93:good401@cluster0.d83w8.mongodb.net/notes?retryWrites=true&w=majority'
+const MONGOOSE_URL = 'mongodb+srv://Aya93:good401@cluster0.d83w8.mongodb.net/notes?retryWrites=true&w=majority';
 
 
 mongoose.connect(MONGOOSE_URL, {
-  useNewUrlParser : true,
-  useUnifiedTopology : true,
-  useCreateIndex : true,
-  useFindAndModify : false
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
 
@@ -23,10 +23,10 @@ const notes = new Notes(input);
 
 async function startApp() {
   if (notes.valid()) {
-    await notes.execute()
+    await notes.execute();
   } else {
     notes.help();
-  } 
+  }
   mongoose.disconnect();
 }
 
